@@ -6,8 +6,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+
+
 
 @Entity
 @Getter
@@ -27,6 +30,7 @@ public class User extends DateAudit {
     @Column(unique = true)
     private String emailAddress;
 
+    @JsonIgnore
     private String password;
 
     @ManyToOne
