@@ -20,7 +20,7 @@ public class User extends DateAudit {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private Long neighbourHoodUserId;
+    private String neighbourHoodUserId;
 
     private String name;
 
