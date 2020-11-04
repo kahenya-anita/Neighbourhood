@@ -38,9 +38,8 @@ public class UserService{
                     .concat(userLoginRequest.getEmailAddress())));
 
         String encodedPassword = Utility.encodePassword(userLoginRequest.getPassword());
-        String decodedPassword = Utility.decodePassword(optionalUser.get().getPassword());
 
-        if (!encodedPassword.equals(decodedPassword))
+        if (!encodedPassword.equals(optionalUser.get().getPassword()))
             return ResponseEntity.ok(new ApiResponse(false,202,"Wrong User Password" +
                     ", Confirm credentials"));
 
