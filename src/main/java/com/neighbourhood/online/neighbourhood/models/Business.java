@@ -31,4 +31,6 @@ public class Business extends DateAudit{
 
     @OneToOne
     private NeighbourHood neighbourHood;
+
+    private String profilePictureFileUuid;
 }

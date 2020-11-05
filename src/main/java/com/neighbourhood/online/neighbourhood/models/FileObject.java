@@ -8,31 +8,28 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Lob;
 
-@Entity
-@Getter
 @Setter
+@Getter
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "neighbourhood_user")
-public class User extends DateAudit {
+public class FileObject  extends DateAudit {
 
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private String neighbourHoodUserId;
+    private String fileId;
 
-    private String name;
+    private String fileName;
 
-    @Column(unique = true)
-    private String emailAddress;
+    private String fileType;
 
+    @Lob
     @JsonIgnore
-    private String password;
-
-    @ManyToOne
-    private NeighbourHood neighbourHood;
-
-    private String profilePictureFileUuid;
+    private byte[] fileData;
 }

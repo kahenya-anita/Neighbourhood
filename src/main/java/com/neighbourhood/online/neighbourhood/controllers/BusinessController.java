@@ -6,6 +6,7 @@ import com.neighbourhood.online.neighbourhood.services.BusinessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("api/v1/business")
@@ -28,7 +29,7 @@ public class BusinessController {
         return businessService.deleteBusiness(businessRequest);
     }
 
-    @PostMapping("find")
+    @GetMapping("find")
     public ResponseEntity<?> findBusiness(@RequestParam String businessId){
         return businessService.findBusiness(businessId);
     }
@@ -41,5 +42,16 @@ public class BusinessController {
     @GetMapping("list_all")
     public ResponseEntity<?> getAllBusinesses(){
         return businessService.getAllBusinesses();
+    }
+
+    @PostMapping("update_profile_picture")
+    public ResponseEntity<?> updateProfilePicture(@RequestParam("file") MultipartFile profilePicture
+            ,@RequestParam("user_id") String businessId){
+        return businessService.updateProfilePicture(profilePicture,businessId);
+    }
+
+    @GetMapping("get_profile_picture")
+    public ResponseEntity<?> getProfilePicture(@RequestParam String businessId){
+        return businessService.getProfilePicture(businessId);
     }
 }
