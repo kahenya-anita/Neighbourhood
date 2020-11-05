@@ -75,4 +75,11 @@ public class UserService{
     public ResponseEntity<?> getAllUsers() {
         return ResponseEntity.ok(userRepository.findAll());
     }
+
+    public ResponseEntity<?> findUser(String userId) {
+        if (userRepository.existsById(userId))
+            return ResponseEntity.ok( new ApiResponse(false,203,
+                    "User does not exists"));
+        return ResponseEntity.ok(userRepository.findById(userId));
+    }
 }

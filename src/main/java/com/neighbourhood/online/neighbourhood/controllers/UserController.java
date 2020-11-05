@@ -33,4 +33,9 @@ public class UserController{
     public ResponseEntity<?> getAllUsers(){
         return userService.getAllUsers();
     }
+
+    @PostMapping("find")
+    public ResponseEntity<?> findUser(@RequestParam String userId){
+        return userService.findUser(userId);
+    }
 }
