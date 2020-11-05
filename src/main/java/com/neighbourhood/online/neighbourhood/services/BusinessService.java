@@ -89,4 +89,9 @@ public class BusinessService implements BusinessFunctions {
     public ResponseEntity<?> updateBusiness(BusinessRequest business) {
         return createBusiness(business);
     }
+
+    @Override
+    public ResponseEntity<?> getAllBusinesses() {
+    return ResponseEntity.ok(businessRepository.findAll());
+}
 }

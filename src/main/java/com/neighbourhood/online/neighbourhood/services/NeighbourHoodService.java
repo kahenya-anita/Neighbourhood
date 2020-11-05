@@ -71,4 +71,9 @@ public class NeighbourHoodService implements NeighbourHoodFunctions {
 
         return ResponseEntity.ok(neighbourHoodRepository.save(neighbourHood));
     }
+
+    @Override
+    public ResponseEntity<?> getAllNeighbourHoods() {
+    return ResponseEntity.ok(neighbourHoodRepository.findAll());
+}
 }

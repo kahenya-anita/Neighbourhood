@@ -71,4 +71,8 @@ public class UserService{
 
         return ResponseEntity.ok(userRepository.save(user));
     }
+
+    public ResponseEntity<?> getAllUsers() {
+    return ResponseEntity.ok(userRepository.findAll());
+    }
 }

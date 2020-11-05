@@ -31,4 +31,9 @@ public class UserController{
     public ResponseEntity<?> registerUser(@RequestBody RegistrationRequest registrationRequest){
         return userService.registerUser(registrationRequest);
     }
+
+    @GetMapping("list_all")
+    public ResponseEntity<?> getAllUsers(){
+    return userService.getAllUsers();
+}
 }

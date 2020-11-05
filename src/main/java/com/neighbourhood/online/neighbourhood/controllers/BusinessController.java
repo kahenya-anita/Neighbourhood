@@ -37,4 +37,9 @@ public class BusinessController {
     public ResponseEntity<?> updateNeighbourhood(@RequestBody BusinessRequest businessRequest){
         return businessService.updateBusiness(businessRequest);
     }
+
+    @GetMapping("list_all")
+    public ResponseEntity<?> getAllBusinesses(){
+    return businessService.getAllBusinesses();
+}
 }

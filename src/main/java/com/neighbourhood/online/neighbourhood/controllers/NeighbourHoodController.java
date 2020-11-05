@@ -41,4 +41,9 @@ public class NeighbourHoodController {
     public ResponseEntity<?> updateOccupants(@RequestBody NeighbourHood neighbourHood){
         return neighbourHoodService.updateOccupants(neighbourHood);
     }
+
+    @GetMapping("list_all")
+    public ResponseEntity<?> getAllNeighbourHoods(){
+    return neighbourHoodService.getAllNeighbourHoods();
+}
 }
