@@ -1,16 +1,14 @@
 package com.neighbourhood.online.neighbourhood.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.neighbourhood.online.neighbourhood.models.audit.DateAudit;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-
-
 
 @Entity
 @Getter

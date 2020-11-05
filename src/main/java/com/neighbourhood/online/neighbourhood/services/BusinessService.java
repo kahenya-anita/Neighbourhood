@@ -92,6 +92,6 @@ public class BusinessService implements BusinessFunctions {
 
     @Override
     public ResponseEntity<?> getAllBusinesses() {
-    return ResponseEntity.ok(businessRepository.findAll());
-}
+        return ResponseEntity.ok(businessRepository.findAll());
+    }
 }

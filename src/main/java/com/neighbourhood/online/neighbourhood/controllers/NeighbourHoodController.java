@@ -44,6 +44,6 @@ public class NeighbourHoodController {
 
     @GetMapping("list_all")
     public ResponseEntity<?> getAllNeighbourHoods(){
-    return neighbourHoodService.getAllNeighbourHoods();
-}
+        return neighbourHoodService.getAllNeighbourHoods();
+    }
 }

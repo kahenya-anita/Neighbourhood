@@ -9,4 +9,5 @@ public interface BusinessFunctions {
     ResponseEntity<?> deleteBusiness(Business business);
     ResponseEntity<?> findBusiness(String businessId);
     ResponseEntity<?> updateBusiness(BusinessRequest business);
+    ResponseEntity<?> getAllBusinesses();
 }

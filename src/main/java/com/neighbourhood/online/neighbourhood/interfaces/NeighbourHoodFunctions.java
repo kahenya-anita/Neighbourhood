@@ -9,4 +9,5 @@ public interface NeighbourHoodFunctions {
     ResponseEntity<?> findNeigbourhood(String neighbourHoodId);
     ResponseEntity<?>  updateNeighbourhood(NeighbourHood neighbourHood);
     ResponseEntity<?>  updateOccupants(NeighbourHood neighbourHood);
+    ResponseEntity<?> getAllNeighbourHoods();
 }

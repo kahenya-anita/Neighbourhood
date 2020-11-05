@@ -40,6 +40,6 @@ public class BusinessController {
 
     @GetMapping("list_all")
     public ResponseEntity<?> getAllBusinesses(){
-    return businessService.getAllBusinesses();
-}
+        return businessService.getAllBusinesses();
+    }
 }
